@@ -3,114 +3,502 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BNS CONNECT LLC – Fiber Optic & Low Voltage</title>
-  <meta name="description" content="BNS CONNECT LLC provides fiber optic, low-voltage cabling, and CCTV services across South Florida."/>
+  <title>BNS Connect LLC — Low Voltage, Fiber Optic & Structured Cabling | South Florida</title>
+  <meta name="description" content="BNS Connect LLC — licensed fiber optic, low-voltage and structured cabling contractor in Fort Lauderdale, FL. BICSI Technician, FOA CFOT, OSHA-10. Serving Broward, Miami-Dade and Palm Beach." />
+  <meta name="theme-color" content="#0B2A3B" />
+  <link rel="canonical" href="https://www.bnsconnectllc.com/" />
+  <link rel="icon" type="image/png" href="./logo.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="BNS Connect LLC — Fiber Optic & Low Voltage, South Florida" />
+  <meta property="og:description" content="Licensed fiber optic, low-voltage and structured cabling contractor. BICSI · CFOT · OSHA-10. Broward · Miami-Dade · Palm Beach." />
+  <meta property="og:url" content="https://www.bnsconnectllc.com/" />
+  <meta property="og:image" content="https://www.bnsconnectllc.com/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"BNS Connect LLC","image":"https://www.bnsconnectllc.com/logo.png","@id":"https://www.bnsconnectllc.com/","url":"https://www.bnsconnectllc.com/","telephone":"+1-954-914-0493","email":"info@bnsconnectllc.com","priceRange":"$$","address":{"@type":"PostalAddress","streetAddress":"477 SW 1st Ave","addressLocality":"Fort Lauderdale","addressRegion":"FL","postalCode":"33301","addressCountry":"US"},"areaServed":[{"@type":"AdministrativeArea","name":"Broward County"},{"@type":"AdministrativeArea","name":"Miami-Dade County"},{"@type":"AdministrativeArea","name":"Palm Beach County"}]}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{ink:'#0B2A3B',ink2:'#0F3A52',accent:'#E8732B',accent2:'#F08A4B',sand:'#F4F1EC'},fontFamily:{display:['Manrope','system-ui','sans-serif'],sans:['Inter','system-ui','sans-serif']},boxShadow:{soft:'0 10px 30px -12px rgba(11,42,59,.25)'}}}}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
-    html,body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji'; }
-    .btn-primary { @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-white bg-blue-700 hover:bg-blue-800 transition; }
-    .card { @apply border border-gray-200 rounded-2xl shadow-sm; }
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',system-ui,sans-serif;color:#0B2A3B;background:#fff}
+    .h-display{font-family:'Manrope',sans-serif;letter-spacing:-.02em}
+    .grad-hero{background:radial-gradient(1200px 600px at 20% 10%,rgba(232,115,43,.18),transparent 60%),radial-gradient(900px 500px at 90% 30%,rgba(15,58,82,.6),transparent 60%),linear-gradient(180deg,#0B2A3B,#0F3A52)}
+    .chip{display:inline-flex;align-items:center;gap:.5rem;padding:.4rem .7rem;border-radius:9999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:#fff;font-size:.78rem}
+    .card{background:#fff;border:1px solid #E6EAEE;border-radius:18px;transition:.25s ease;box-shadow:0 1px 0 rgba(11,42,59,.04)}
+    .card:hover{transform:translateY(-3px);box-shadow:0 18px 40px -20px rgba(11,42,59,.25);border-color:#D6DEE6}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.85rem 1.2rem;border-radius:9999px;font-weight:600;transition:.2s}
+    .btn-primary{background:#E8732B;color:#fff}
+    .btn-primary:hover{background:#d8631d}
+    .btn-ghost{border:1px solid rgba(255,255,255,.25);color:#fff}
+    .btn-ghost:hover{background:rgba(255,255,255,.08)}
+    .btn-outline{border:1px solid #0B2A3B;color:#0B2A3B}
+    .btn-outline:hover{background:#0B2A3B;color:#fff}
+    .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+    .reveal.visible{opacity:1;transform:none}
+    .grid-bg{background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:32px 32px}
+    .lang-btn[aria-current="true"]{background:#E8732B;color:#fff}
+    details>summary{list-style:none;cursor:pointer}
+    details>summary::-webkit-details-marker{display:none}
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-  <!-- Header -->
-  <header class="bg-white/90 backdrop-blur sticky top-0 z-20 shadow-sm">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-<img src="./logo.svg" alt="BNS CONNECT LLC" class="h-12 w-auto sm:h-16">
-        <span class="sr-only">BNS CONNECT LLC</span>
-      </div>
-      <nav class="hidden md:flex gap-8 text-sm font-semibold">
-        <a href="#services" class="hover:text-blue-700">Services</a>
-        <a href="#about" class="hover:text-blue-700">About</a>
-        <a href="#contact" class="hover:text-blue-700">Contact</a>
+<body class="antialiased">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-accent text-white px-3 py-2 rounded">Skip to content</a>
+
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2" aria-label="BNS Connect home">
+        <img src="./logo.png" alt="BNS Connect LLC" class="h-9 w-auto" />
+      </a>
+      <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-ink">
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#process" data-i18n="nav.process">Process</a>
+        <a href="#coverage" data-i18n="nav.coverage">Coverage</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
-      <a href="mailto:info@bnsconnectllc.com?subject=Quote%20Request" class="btn-primary text-sm">Get a Quote</a>
+      <div class="flex items-center gap-2">
+        <div class="hidden sm:flex items-center text-xs rounded-full border border-slate-200 overflow-hidden">
+          <button class="lang-btn px-2.5 py-1" data-lang="en" aria-current="true">EN</button>
+          <button class="lang-btn px-2.5 py-1 border-l border-slate-200" data-lang="es">ES</button>
+          <button class="lang-btn px-2.5 py-1 border-l border-slate-200" data-lang="ru">RU</button>
+        </div>
+        <a href="#contact" class="btn btn-primary text-sm" data-i18n="nav.cta">Get a Quote</a>
+      </div>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="bg-gradient-to-b from-blue-50 to-white">
-    <div class="max-w-6xl mx-auto px-4 pt-20 pb-16 text-center">
-      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-blue-900">
-        Fiber Optic & Low‑Voltage Services
-      </h1>
-      <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-        Professional installation, splicing support, testing and structured cabling across South Florida.
-        Licensed business, OSHA‑10 certified, and fully insured.
-      </p>
-      <div class="mt-8 flex items-center justify-center gap-4">
-        <a href="mailto:info@bnsconnectllc.com?subject=Quote%20Request" class="btn-primary">Get a Quote</a>
-        <a href="#services" class="inline-flex items-center justify-center rounded-full px-6 py-3 border border-blue-700 text-blue-700 hover:bg-blue-50 transition">Our Services</a>
+  <main id="main">
+
+  <section class="relative grad-hero text-white overflow-hidden">
+    <div class="absolute inset-0 grid-bg opacity-40 pointer-events-none"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 pt-20 pb-24 lg:pt-28 lg:pb-32">
+      <div class="grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-7">
+          <div class="flex flex-wrap gap-2 mb-6">
+            <span class="chip">• BICSI Technician</span>
+            <span class="chip">• FOA CFOT</span>
+            <span class="chip">• OSHA-10</span>
+            <span class="chip">• Insured $1M / $2M</span>
+          </div>
+          <h1 class="h-display text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05]">
+            <span data-i18n="hero.title">Fiber Optic & Low-Voltage built right — the first time.</span>
+          </h1>
+          <p class="mt-6 text-lg text-white/80 max-w-2xl" data-i18n="hero.lead">
+            BNS Connect LLC is a Fort Lauderdale-based contractor specializing in fiber optic installation, fusion splicing, structured cabling, CCTV and Wi-Fi systems for commercial, hospitality and residential projects across South Florida.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#contact" class="btn btn-primary" data-i18n="hero.cta1">Request a free site survey</a>
+            <a href="#services" class="btn btn-ghost" data-i18n="hero.cta2">Explore services</a>
+          </div>
+          <dl class="mt-10 grid grid-cols-3 gap-6 max-w-lg">
+            <div><dt class="text-3xl font-extrabold h-display">15+</dt><dd class="text-xs text-white/70" data-i18n="hero.stat1">years field experience</dd></div>
+            <div><dt class="text-3xl font-extrabold h-display">1,500+</dt><dd class="text-xs text-white/70" data-i18n="hero.stat2">subscribers migrated to fiber</dd></div>
+            <div><dt class="text-3xl font-extrabold h-display">100%</dt><dd class="text-xs text-white/70" data-i18n="hero.stat3">licensed & insured</dd></div>
+          </dl>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <div class="absolute -inset-6 bg-accent/20 blur-3xl rounded-full"></div>
+            <div class="relative rounded-3xl bg-white/5 border border-white/10 backdrop-blur p-6 shadow-soft">
+              <img src="./logo.png" alt="BNS Connect logo" class="w-full h-auto rounded-2xl" />
+              <ul class="mt-6 space-y-3 text-sm text-white/85">
+                <li class="flex gap-3"><span class="text-accent">▸</span><span data-i18n="hero.bullet1">Single-mode & multi-mode fiber, fusion splicing, OTDR & power-meter testing</span></li>
+                <li class="flex gap-3"><span class="text-accent">▸</span><span data-i18n="hero.bullet2">CAT5e/CAT6 structured cabling, IDF/MDF buildouts, rack & cable management</span></li>
+                <li class="flex gap-3"><span class="text-accent">▸</span><span data-i18n="hero.bullet3">CCTV, PoE camera systems, Wi-Fi site surveys & access points</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Badges -->
-  <section class="py-6">
-    <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-3 text-xs md:text-sm text-center">
-      <div class="card p-3">OSHA‑10 Certified</div>
-      <div class="card p-3">General Liability: $1M / $2M</div>
-      <div class="card p-3">Workers’ Comp Exemption</div>
-      <div class="card p-3">South Florida Coverage</div>
+  <section class="bg-sand border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-sm font-semibold text-ink">
+      <div>BICSI Technician #424441</div>
+      <div>FOA Certified Fiber Optic Technician</div>
+      <div>OSHA-10 (USWS45232031)</div>
+      <div>Hiscox GL $1M / $2M · WC Exempt</div>
     </div>
   </section>
+  <section id="services" class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="max-w-2xl">
+        <p class="text-sm font-bold uppercase tracking-widest text-accent" data-i18n="services.kicker">Services</p>
+        <h2 class="h-display text-3xl sm:text-4xl font-extrabold mt-2" data-i18n="services.title">Engineered networks. Cleanly installed. Tested to spec.</h2>
+        <p class="mt-4 text-slate-600" data-i18n="services.lead">From single drops to full IDF/MDF buildouts — every job is documented, labeled and tested. Below is what we do most often for general contractors, integrators and end customers in South Florida.</p>
+      </div>
 
-  <!-- Services -->
-  <section id="services" class="py-16 bg-white">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center">Our Services</h2>
+      <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <article class="card p-7 reveal">
+          <div class="h-11 w-11 rounded-xl bg-ink text-white grid place-items-center mb-5">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12c4-8 14-8 18 0M5 12c3-5 11-5 14 0M8 12c2-3 6-3 8 0M11 12h2"/></svg>
+          </div>
+          <h3 class="h-display text-xl font-bold" data-i18n="srv.fiber.t">Fiber Optic Installation & Splicing</h3>
+          <p class="mt-3 text-sm text-slate-600" data-i18n="srv.fiber.d">Single-mode and multi-mode fiber pulling, fusion splicing, termination, OTDR and power-meter testing. Backbone, FTTH/FTTB, distribution cabinets and splice closures.</p>
+        </article>
+
+        <article class="card p-7 reveal">
+          <div class="h-11 w-11 rounded-xl bg-ink text-white grid place-items-center mb-5">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8v8M11 8v8M15 8v8M19 8v8"/></svg>
+          </div>
+          <h3 class="h-display text-xl font-bold" data-i18n="srv.lv.t">Low-Voltage & Structured Cabling</h3>
+          <p class="mt-3 text-sm text-slate-600" data-i18n="srv.lv.d">CAT5e / CAT6 / CAT6A, coax, audio and control cabling. IDF/MDF buildouts, patch panels, racks, cable management, labeling and certification testing.</p>
+        </article>
+
+        <article class="card p-7 reveal">
+          <div class="h-11 w-11 rounded-xl bg-ink text-white grid place-items-center mb-5">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/></svg>
+          </div>
+          <h3 class="h-display text-xl font-bold" data-i18n="srv.cctv.t">CCTV & Security Systems</h3>
+          <p class="mt-3 text-sm text-slate-600" data-i18n="srv.cctv.d">PoE IP cameras, NVR / video recorders, PoE switches, mounting, configuration and remote access. Clean cabling, labeling, photo documentation and commissioning.</p>
+        </article>
+
+        <article class="card p-7 reveal">
+          <div class="h-11 w-11 rounded-xl bg-ink text-white grid place-items-center mb-5">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12c2-2 5-3 7-3s5 1 7 3"/><path d="M2 8c3-3 7-5 10-5s7 2 10 5"/><circle cx="12" cy="17" r="1.5"/></svg>
+          </div>
+          <h3 class="h-display text-xl font-bold" data-i18n="srv.wifi.t">Wi-Fi Site Surveys & Access Points</h3>
+          <p class="mt-3 text-sm text-slate-600" data-i18n="srv.wifi.d">RF site surveys, AP placement and signal coverage planning. Installation, switch provisioning and testing for retail, hospitality and office environments.</p>
+        </article>
+      </div>
+
       <div class="mt-10 grid md:grid-cols-3 gap-6">
-        <div class="card p-6">
-          <h3 class="text-xl font-bold text-blue-800">Fiber Optic Installation</h3>
-          <p class="mt-2 text-gray-600">Cable pulling, termination prep, splicing support, OTDR & power meter testing.</p>
-        </div>
-        <div class="card p-6">
-          <h3 class="text-xl font-bold text-blue-800">Low‑Voltage Cabling</h3>
-          <p class="mt-2 text-gray-600">CAT6, coax, structured wiring, cabinets & rack management for residential and commercial.</p>
-        </div>
-        <div class="card p-6">
-          <h3 class="text-xl font-bold text-blue-800">CCTV & Security</h3>
-          <p class="mt-2 text-gray-600">Camera installation, configuration and maintenance with clean labeling and testing.</p>
-        </div>
+        <div class="card p-6 reveal"><h4 class="font-bold" data-i18n="srv.extra1.t">Site Surveys & Documentation</h4><p class="mt-2 text-sm text-slate-600" data-i18n="srv.extra1.d">Pre-installation walks, BOM preparation, photo reports and as-built documentation for GCs and integrators.</p></div>
+        <div class="card p-6 reveal"><h4 class="font-bold" data-i18n="srv.extra2.t">Troubleshooting & Maintenance</h4><p class="mt-2 text-sm text-slate-600" data-i18n="srv.extra2.d">VFL / OTDR / power-meter fault location, splice repair, camera and switch diagnostics, restoration of subscriber service.</p></div>
+        <div class="card p-6 reveal"><h4 class="font-bold" data-i18n="srv.extra3.t">Subcontracting Crews</h4><p class="mt-2 text-sm text-slate-600" data-i18n="srv.extra3.d">Available for overflow work with low-voltage and electrical contractors across Broward, Miami-Dade and Palm Beach counties.</p></div>
+      </div>
+    </div>
+  </section>
+  <section id="experience" class="bg-ink text-white py-20 lg:py-28 relative overflow-hidden">
+    <div class="absolute inset-0 grid-bg opacity-30 pointer-events-none"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="max-w-2xl">
+        <p class="text-sm font-bold uppercase tracking-widest text-accent" data-i18n="exp.kicker">Experience</p>
+        <h2 class="h-display text-3xl sm:text-4xl font-extrabold mt-2" data-i18n="exp.title">15+ years on telecom & security projects — from city traffic networks to enterprise IP telephony.</h2>
+        <p class="mt-4 text-white/75" data-i18n="exp.lead">Selected highlights from the founder's field record with major telecom integrators (MGTS, Rostelecom) prior to launching BNS Connect LLC in Florida.</p>
+      </div>
+      <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="card !bg-white/5 !border-white/10 p-6 text-white"><p class="text-xs text-accent font-bold uppercase tracking-wider">Fiber backbone</p><h4 class="h-display text-lg font-bold mt-1" data-i18n="exp.c1.t">City traffic & surveillance fiber</h4><p class="mt-2 text-sm text-white/80" data-i18n="exp.c1.d">Fiber optic communication lines connecting telecom nodes to traffic-signal control cabinets across approximately 20 city sites — cable routing, fusion splicing, OTDR and power-meter testing.</p></div>
+        <div class="card !bg-white/5 !border-white/10 p-6 text-white"><p class="text-xs text-accent font-bold uppercase tracking-wider">FTTH / MDU</p><h4 class="h-display text-lg font-bold mt-1" data-i18n="exp.c2.t">In-building fiber for residential MDUs</h4><p class="mt-2 text-sm text-white/80" data-i18n="exp.c2.d">Building distribution from optical cabinets through risers, color-coded fiber separation per floor, fusion splicing of pigtails, splice cassette organization and subscriber drop installations.</p></div>
+        <div class="card !bg-white/5 !border-white/10 p-6 text-white"><p class="text-xs text-accent font-bold uppercase tracking-wider">Network upgrade</p><h4 class="h-display text-lg font-bold mt-1" data-i18n="exp.c3.t">Copper→fiber migration for 1,500+ subscribers</h4><p class="mt-2 text-sm text-white/80" data-i18n="exp.c3.d">Migration of 4 telephone distribution cabinets to fiber infrastructure — supervised cutover, configured telephone gateways, verified restoration of service.</p></div>
+        <div class="card !bg-white/5 !border-white/10 p-6 text-white"><p class="text-xs text-accent font-bold uppercase tracking-wider">CCTV / PoE</p><h4 class="h-display text-lg font-bold mt-1" data-i18n="exp.c4.t">PoE camera systems for public schools</h4><p class="mt-2 text-sm text-white/80" data-i18n="exp.c4.d">Turn-key surveillance for 5 public schools — PoE cameras, structured cabling, NVRs and PoE switches, labeling, testing and integration with the centralized monitoring network.</p></div>
+        <div class="card !bg-white/5 !border-white/10 p-6 text-white"><p class="text-xs text-accent font-bold uppercase tracking-wider">Enterprise voice</p><h4 class="h-display text-lg font-bold mt-1" data-i18n="exp.c5.t">95 IP phones — government rollout</h4><p class="mt-2 text-sm text-white/80" data-i18n="exp.c5.d">Installation and configuration of 95 Yealink IP telephones across government offices, including network connection verification and full photo documentation.</p></div>
+        <div class="card !bg-white/5 !border-white/10 p-6 text-white"><p class="text-xs text-accent font-bold uppercase tracking-wider">Hospitality</p><h4 class="h-display text-lg font-bold mt-1" data-i18n="exp.c6.t">Hotel telephony modernization</h4><p class="mt-2 text-sm text-white/80" data-i18n="exp.c6.d">Replacement of an analog phone system serving 45 guest rooms with a digital solution — new gateways, communication channel, full system test and commissioning.</p></div>
+        <div class="card !bg-white/5 !border-white/10 p-6 text-white"><p class="text-xs text-accent font-bold uppercase tracking-wider">Wi-Fi rollout</p><h4 class="h-display text-lg font-bold mt-1" data-i18n="exp.c7.t">Wi-Fi for 10 bank branches</h4><p class="mt-2 text-sm text-white/80" data-i18n="exp.c7.d">RF site surveys at 10 branches, AP placement evaluation, switch capacity review, channel verification, consolidated work-order package and acceptance of completed installations.</p></div>
+        <div class="card !bg-white/5 !border-white/10 p-6 text-white"><p class="text-xs text-accent font-bold uppercase tracking-wider">Stadium / event</p><h4 class="h-display text-lg font-bold mt-1" data-i18n="exp.c8.t">Stadium telecom rooms & festival displays</h4><p class="mt-2 text-sm text-white/80" data-i18n="exp.c8.d">5 communication channels and 9 switches across 5 TRs at a major football stadium; 150-inch digital displays with temporary communication channels for a public festival.</p></div>
+        <div class="card !bg-white/5 !border-white/10 p-6 text-white"><p class="text-xs text-accent font-bold uppercase tracking-wider">Wireless bridge</p><h4 class="h-display text-lg font-bold mt-1" data-i18n="exp.c9.t">Point-to-point wireless solution</h4><p class="mt-2 text-sm text-white/80" data-i18n="exp.c9.d">When backbone entry was not feasible, designed and installed a directional-antenna wireless bridge from a neighboring connected building, including approvals, configuration and testing.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="py-16 bg-gray-50">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold">About Us</h2>
-      <p class="mt-4 text-lg text-gray-600">
-        BNS CONNECT LLC is a South‑Florida contractor providing reliable fiber optic and low‑voltage solutions across Broward,
-        Miami‑Dade and Palm Beach counties. We partner with licensed primes to deliver safe, efficient, and high‑quality builds.
-      </p>
+  <section class="py-20 lg:py-28 bg-sand">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-start">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-widest text-accent" data-i18n="why.kicker">Why BNS Connect</p>
+        <h2 class="h-display text-3xl sm:text-4xl font-extrabold mt-2" data-i18n="why.title">A senior technician on every job — not a sales pitch.</h2>
+        <p class="mt-4 text-slate-700" data-i18n="why.lead">We're a focused South Florida operation owned and run by a hands-on field engineer. That means accountable scheduling, clean cable management, real test results, and photo documentation you can hand to the customer the same day.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div class="card p-6"><h4 class="font-bold" data-i18n="why.b1.t">Certified & insured</h4><p class="mt-2 text-sm text-slate-600" data-i18n="why.b1.d">BICSI Technician, FOA CFOT, OSHA-10, Hiscox GL $1M / $2M, Florida WC Exemption.</p></div>
+        <div class="card p-6"><h4 class="font-bold" data-i18n="why.b2.t">Tested to spec</h4><p class="mt-2 text-sm text-slate-600" data-i18n="why.b2.d">OTDR traces, power-meter readings, CAT6 certification reports, photo documentation per drop.</p></div>
+        <div class="card p-6"><h4 class="font-bold" data-i18n="why.b3.t">GC-friendly</h4><p class="mt-2 text-sm text-slate-600" data-i18n="why.b3.d">Punch-list focused, COI on request, photo reports, clean handover packages.</p></div>
+        <div class="card p-6"><h4 class="font-bold" data-i18n="why.b4.t">Multilingual</h4><p class="mt-2 text-sm text-slate-600" data-i18n="why.b4.d">Project communication in English, Spanish and Russian — ideal for South Florida crews.</p></div>
+      </div>
+    </div>
+  </section>
+  <section id="process" class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="max-w-2xl">
+        <p class="text-sm font-bold uppercase tracking-widest text-accent" data-i18n="proc.kicker">How we work</p>
+        <h2 class="h-display text-3xl sm:text-4xl font-extrabold mt-2" data-i18n="proc.title">A clear, four-step process from first call to handover.</h2>
+      </div>
+      <ol class="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <li class="card p-6"><div class="text-accent h-display text-3xl font-extrabold">01</div><h4 class="h-display text-lg font-bold mt-1" data-i18n="proc.s1.t">Free site survey</h4><p class="mt-2 text-sm text-slate-600" data-i18n="proc.s1.d">We walk the site, review drawings, document existing infrastructure and discuss your goals and constraints.</p></li>
+        <li class="card p-6"><div class="text-accent h-display text-3xl font-extrabold">02</div><h4 class="h-display text-lg font-bold mt-1" data-i18n="proc.s2.t">Quote & scope</h4><p class="mt-2 text-sm text-slate-600" data-i18n="proc.s2.d">You receive a clear, line-itemed proposal with materials, labor, timing and acceptance criteria.</p></li>
+        <li class="card p-6"><div class="text-accent h-display text-3xl font-extrabold">03</div><h4 class="h-display text-lg font-bold mt-1" data-i18n="proc.s3.t">Installation & test</h4><p class="mt-2 text-sm text-slate-600" data-i18n="proc.s3.d">Cabling, splicing, mounting and configuration — followed by certification testing and labeling.</p></li>
+        <li class="card p-6"><div class="text-accent h-display text-3xl font-extrabold">04</div><h4 class="h-display text-lg font-bold mt-1" data-i18n="proc.s4.t">Handover & documentation</h4><p class="mt-2 text-sm text-slate-600" data-i18n="proc.s4.d">Photo report, OTDR / certification results, as-built drawings and punch-list closeout.</p></li>
+      </ol>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-16 bg-white">
-    <div class="max-w-3xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold">Contact</h2>
-      <p class="mt-2 text-gray-600">Have a project or need a quote? Let’s talk.</p>
-      <div class="mt-4">
-        <a href="mailto:info@bnsconnectllc.com" class="text-blue-700 font-semibold hover:underline text-lg">info@bnsconnectllc.com</a>
-        <p class="mt-1 text-gray-700">+1 (954) 914‑0493</p>
-        <p class="mt-1 text-gray-500">401 SW 1st Ave, Fort Lauderdale, FL</p>
+  <section id="coverage" class="py-20 lg:py-28 bg-ink text-white relative overflow-hidden">
+    <div class="absolute inset-0 grid-bg opacity-25 pointer-events-none"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-widest text-accent" data-i18n="cov.kicker">Coverage</p>
+        <h2 class="h-display text-3xl sm:text-4xl font-extrabold mt-2" data-i18n="cov.title">Serving Broward, Miami-Dade and Palm Beach counties.</h2>
+        <p class="mt-4 text-white/80" data-i18n="cov.lead">Based in Fort Lauderdale, we cover the tri-county area for commercial fit-outs, hospitality, retail, MDU residential and government projects.</p>
+        <ul class="mt-6 space-y-2 text-sm">
+          <li class="flex gap-3"><span class="text-accent">●</span>Fort Lauderdale, Hollywood, Pompano Beach, Coral Springs, Pembroke Pines, Sunrise, Deerfield Beach</li>
+          <li class="flex gap-3"><span class="text-accent">●</span>Miami, Miami Beach, Doral, Aventura, Hialeah, Kendall</li>
+          <li class="flex gap-3"><span class="text-accent">●</span>Boca Raton, Delray Beach, West Palm Beach, Boynton Beach</li>
+        </ul>
+      </div>
+      <div class="card !bg-white/5 !border-white/10 p-6 lg:p-8">
+        <h3 class="h-display font-bold text-xl" data-i18n="cov.h2">Available days</h3>
+        <p class="mt-2 text-sm text-white/80" data-i18n="cov.h2d">Monday – Sunday, daytime work. Evening and emergency support coming soon.</p>
+        <h3 class="h-display font-bold text-xl mt-6" data-i18n="cov.h3">Available for</h3>
+        <ul class="mt-2 text-sm text-white/85 grid grid-cols-2 gap-y-1">
+          <li>• General contractors</li><li>• LV / EC subcontracts</li>
+          <li>• AV / IT integrators</li><li>• ISP last-mile</li>
+          <li>• Hospitality</li><li>• Retail rollouts</li>
+          <li>• Office fit-outs</li><li>• MDU residential</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-blue-900 text-white text-center py-6">
-    <p>© <span id="year"></span> BNS CONNECT LLC. All rights reserved.</p>
+  <section id="faq" class="py-20 lg:py-28">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <p class="text-sm font-bold uppercase tracking-widest text-accent" data-i18n="faq.kicker">FAQ</p>
+      <h2 class="h-display text-3xl sm:text-4xl font-extrabold mt-2" data-i18n="faq.title">Frequently asked questions</h2>
+      <div class="mt-10 divide-y divide-slate-200 border-y border-slate-200">
+        <details class="py-5"><summary class="flex items-center justify-between font-semibold"><span data-i18n="faq.q1">Are you licensed and insured?</span><span class="text-accent">+</span></summary><p class="mt-3 text-slate-600 text-sm" data-i18n="faq.a1">Yes. BNS Connect LLC carries Hiscox General Liability ($1M per occurrence / $2M aggregate) and a Florida Workers' Comp Exemption. Certificate of Insurance available on request.</p></details>
+        <details class="py-5"><summary class="flex items-center justify-between font-semibold"><span data-i18n="faq.q2">What certifications does the technician hold?</span><span class="text-accent">+</span></summary><p class="mt-3 text-slate-600 text-sm" data-i18n="faq.a2">BICSI Technician (#424441), FOA Certified Fiber Optic Technician (CFOT), OSHA-10, plus DBPR Electrical Business and Limited Energy exams passed.</p></details>
+        <details class="py-5"><summary class="flex items-center justify-between font-semibold"><span data-i18n="faq.q3">Do you work as a subcontractor for GCs and integrators?</span><span class="text-accent">+</span></summary><p class="mt-3 text-slate-600 text-sm" data-i18n="faq.a3">Absolutely — overflow crew work, single-day mobilizations and ongoing support are all welcome. We can issue COIs and supply W-9 on request.</p></details>
+        <details class="py-5"><summary class="flex items-center justify-between font-semibold"><span data-i18n="faq.q4">What testing reports do you provide?</span><span class="text-accent">+</span></summary><p class="mt-3 text-slate-600 text-sm" data-i18n="faq.a4">For fiber: OTDR traces and bidirectional power-meter readings. For copper: CAT5e/CAT6 certification reports. Plus photo documentation and as-built notes.</p></details>
+        <details class="py-5"><summary class="flex items-center justify-between font-semibold"><span data-i18n="faq.q5">Which languages do you speak on site?</span><span class="text-accent">+</span></summary><p class="mt-3 text-slate-600 text-sm" data-i18n="faq.a5">English, Spanish and Russian. Ideal for South Florida's mixed crews and customers.</p></details>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="contact" class="py-20 lg:py-28 bg-sand">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-widest text-accent" data-i18n="ct.kicker">Get in touch</p>
+        <h2 class="h-display text-3xl sm:text-4xl font-extrabold mt-2" data-i18n="ct.title">Tell us about your project.</h2>
+        <p class="mt-4 text-slate-700" data-i18n="ct.lead">Send a few lines about scope, location and timeline. We typically reply the same business day with next steps or a site-survey time.</p>
+        <div class="mt-8 space-y-4 text-sm">
+          <div class="flex items-start gap-3"><span class="h-9 w-9 grid place-items-center rounded-full bg-ink text-white">@</span><div><p class="font-bold">Email</p><a class="text-accent" href="mailto:info@bnsconnectllc.com">info@bnsconnectllc.com</a></div></div>
+          <div class="flex items-start gap-3"><span class="h-9 w-9 grid place-items-center rounded-full bg-ink text-white">in</span><div><p class="font-bold">LinkedIn</p><a class="text-accent" href="https://www.linkedin.com/" rel="noopener" target="_blank">Connect on LinkedIn</a></div></div>
+          <div class="flex items-start gap-3"><span class="h-9 w-9 grid place-items-center rounded-full bg-ink text-white">⌖</span><div><p class="font-bold" data-i18n="ct.based">Based in</p><p>Fort Lauderdale, FL — serving Broward, Miami-Dade & Palm Beach</p></div></div>
+        </div>
+        <div class="mt-8 card p-5 text-sm bg-white">
+          <p class="font-bold" data-i18n="ct.creds">Company credentials</p>
+          <ul class="mt-2 space-y-1 text-slate-700">
+            <li>BNS Connect LLC</li>
+            <li>BICSI Technician #424441 · FOA CFOT</li>
+            <li>OSHA-10 #USWS45232031</li>
+            <li>Hiscox General Liability — $1M / $2M</li>
+            <li>FL Workers' Comp Exemption E02221999</li>
+          </ul>
+        </div>
+      </div>
+      <form action="https://api.web3forms.com/submit" method="POST" class="card p-6 lg:p-8 bg-white space-y-4" id="quoteForm">
+        <input type="hidden" name="access_key" value="REPLACE_WITH_YOUR_WEB3FORMS_KEY" />
+        <input type="hidden" name="subject" value="New quote request — bnsconnectllc.com" />
+        <input type="hidden" name="from_name" value="BNS Connect website" />
+        <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" />
+        <div class="grid sm:grid-cols-2 gap-4">
+          <label class="block"><span class="text-xs font-semibold" data-i18n="ct.f.name">Your name *</span><input required name="name" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-accent" /></label>
+          <label class="block"><span class="text-xs font-semibold" data-i18n="ct.f.company">Company</span><input name="company" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-accent" /></label>
+          <label class="block"><span class="text-xs font-semibold" data-i18n="ct.f.email">Email *</span><input required type="email" name="email" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-accent" /></label>
+          <label class="block"><span class="text-xs font-semibold" data-i18n="ct.f.phone">Phone</span><input name="phone" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-accent" /></label>
+        </div>
+        <label class="block"><span class="text-xs font-semibold" data-i18n="ct.f.service">Service interested in</span>
+          <select name="service" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-accent">
+            <option>Fiber Optic Installation & Splicing</option>
+            <option>Low-Voltage / Structured Cabling</option>
+            <option>CCTV / Security Cameras</option>
+            <option>Wi-Fi Site Survey / Access Points</option>
+            <option>Subcontract / Overflow crew</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label class="block"><span class="text-xs font-semibold" data-i18n="ct.f.location">Project location</span><input name="location" placeholder="City / county" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-accent" /></label>
+        <label class="block"><span class="text-xs font-semibold" data-i18n="ct.f.message">Project details *</span><textarea required name="message" rows="5" class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-accent"></textarea></label>
+        <button type="submit" class="btn btn-primary w-full" data-i18n="ct.f.submit">Send request</button>
+        <p class="text-xs text-slate-500" data-i18n="ct.f.note">By submitting, you agree to be contacted about your inquiry. We never share your info.</p>
+      </form>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="bg-ink text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 grid md:grid-cols-3 gap-8">
+      <div>
+        <img src="./logo.png" alt="BNS Connect LLC" class="h-12 w-auto" />
+        <p class="mt-4 text-sm text-white/70" data-i18n="ft.tag">Low Voltage · Fiber Optic · Florida — installation, splicing, cabling.</p>
+      </div>
+      <div>
+        <h5 class="font-bold" data-i18n="ft.h1">Services</h5>
+        <ul class="mt-3 space-y-1 text-sm text-white/80">
+          <li><a href="#services">Fiber Optic Installation</a></li>
+          <li><a href="#services">Structured Cabling</a></li>
+          <li><a href="#services">CCTV / Security</a></li>
+          <li><a href="#services">Wi-Fi Site Surveys</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-bold" data-i18n="ft.h2">Contact</h5>
+        <ul class="mt-3 space-y-1 text-sm text-white/80">
+          <li><a class="hover:text-accent" href="mailto:info@bnsconnectllc.com">info@bnsconnectllc.com</a></li>
+          <li><a class="hover:text-accent" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li>Fort Lauderdale, FL</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row gap-3 justify-between items-center text-xs text-white/60">
+        <p>© <span id="year"></span> BNS Connect LLC. All rights reserved.</p>
+        <p>Licensed · Insured · BICSI · CFOT · OSHA-10</p>
+      </div>
+    </div>
   </footer>
 
+
   <script>
+    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+    // i18n
+    const dict = {
+      en:{},
+      es:{
+        'nav.services':'Servicios','nav.experience':'Experiencia','nav.process':'Proceso','nav.coverage':'Cobertura','nav.faq':'Preguntas','nav.contact':'Contacto','nav.cta':'Solicitar cotización',
+        'hero.title':'Fibra óptica y baja tensión bien hechos — a la primera.',
+        'hero.lead':'BNS Connect LLC es un contratista de Fort Lauderdale especializado en instalación de fibra óptica, fusión, cableado estructurado, CCTV y Wi-Fi para proyectos comerciales, hoteleros y residenciales en el sur de Florida.',
+        'hero.cta1':'Inspección gratuita en sitio','hero.cta2':'Ver servicios',
+        'hero.stat1':'años de experiencia','hero.stat2':'suscriptores migrados a fibra','hero.stat3':'licenciados y asegurados',
+        'hero.bullet1':'Fibra monomodo y multimodo, fusión, OTDR y medidor de potencia',
+        'hero.bullet2':'Cableado estructurado CAT5e/CAT6, IDF/MDF, racks y orden',
+        'hero.bullet3':'CCTV, cámaras PoE, Wi-Fi y puntos de acceso',
+        'services.kicker':'Servicios','services.title':'Redes diseñadas. Instaladas con orden. Probadas a norma.',
+        'services.lead':'Desde un solo punto hasta IDF/MDF completo — todo trabajo se documenta, etiqueta y prueba. Esto es lo que más hacemos para GCs, integradores y clientes finales en el sur de Florida.',
+        'srv.fiber.t':'Instalación y fusión de fibra óptica','srv.fiber.d':'Tendido de fibra monomodo y multimodo, fusión, terminación, pruebas con OTDR y medidor de potencia. Backbone, FTTH/FTTB, gabinetes y cierres.',
+        'srv.lv.t':'Baja tensión y cableado estructurado','srv.lv.d':'CAT5e / CAT6 / CAT6A, coaxial, audio y control. IDF/MDF, paneles, racks, organización, etiquetado y certificación.',
+        'srv.cctv.t':'CCTV y sistemas de seguridad','srv.cctv.d':'Cámaras IP PoE, NVR, switches PoE, montaje, configuración y acceso remoto. Cableado limpio, etiquetado, fotos y puesta en marcha.',
+        'srv.wifi.t':'Wi-Fi: estudios y puntos de acceso','srv.wifi.d':'Estudios de RF, ubicación de APs y planificación de cobertura. Instalación, switches y pruebas para retail, hostelería y oficinas.',
+        'srv.extra1.t':'Estudios y documentación','srv.extra1.d':'Recorridos previos, BOM, reportes con fotos y planos as-built para GCs e integradores.',
+        'srv.extra2.t':'Diagnóstico y mantenimiento','srv.extra2.d':'Localización con VFL/OTDR/medidor, reparación de fusiones, diagnóstico de cámaras y switches.',
+        'srv.extra3.t':'Cuadrillas en subcontrato','srv.extra3.d':'Disponibles para overflow con contratistas LV/EC en Broward, Miami-Dade y Palm Beach.',
+        'exp.kicker':'Experiencia','exp.title':'Más de 15 años en proyectos de telecom y seguridad — desde redes urbanas hasta telefonía IP empresarial.','exp.lead':'Hitos del historial del fundador con grandes integradores (MGTS, Rostelecom) antes de lanzar BNS Connect LLC en Florida.',
+        'exp.c1.t':'Fibra para tráfico y videovigilancia urbana','exp.c1.d':'Líneas de fibra óptica entre nodos de telecom y gabinetes de control de semáforos en ~20 sitios — tendido, fusión, OTDR y medición.',
+        'exp.c2.t':'Fibra interna en MDU residencial','exp.c2.d':'Distribución desde gabinetes ópticos por riser, separación por colores por piso, fusión de pigtails, organización en cassettes y conexiones a suscriptor.',
+        'exp.c3.t':'Migración cobre→fibra para 1.500+ suscriptores','exp.c3.d':'Migración de 4 gabinetes a fibra — supervisión del corte, configuración de gateways y verificación del servicio.',
+        'exp.c4.t':'Cámaras PoE para escuelas públicas','exp.c4.d':'Videovigilancia llave en mano para 5 escuelas — cámaras PoE, cableado, NVR y switches PoE, etiquetado, pruebas e integración.',
+        'exp.c5.t':'95 teléfonos IP — gobierno','exp.c5.d':'Instalación y configuración de 95 Yealink en oficinas gubernamentales con verificación y documentación fotográfica.',
+        'exp.c6.t':'Modernización de telefonía hotelera','exp.c6.d':'Sustitución del sistema analógico de 45 habitaciones por solución digital — gateways, canal de comunicación, prueba completa.',
+        'exp.c7.t':'Wi-Fi para 10 sucursales bancarias','exp.c7.d':'Estudios RF en 10 sucursales, ubicación de APs, capacidad de switches, paquete consolidado de órdenes y aceptación.',
+        'exp.c8.t':'Telecom de estadio y pantallas de festival','exp.c8.d':'5 canales y 9 switches en 5 TRs de un estadio mayor; pantallas digitales de 150" con canales temporales para un festival público.',
+        'exp.c9.t':'Solución inalámbrica punto a punto','exp.c9.d':'Cuando no fue viable la entrada del backbone, se instaló un puente de antenas direccionales desde un edificio vecino conectado.',
+        'why.kicker':'Por qué BNS Connect','why.title':'Un técnico senior en cada trabajo — no un discurso de ventas.','why.lead':'Operación enfocada en el sur de Florida, dirigida por un ingeniero de campo. Calendario responsable, cableado limpio, resultados reales y fotos para entregar el mismo día.',
+        'why.b1.t':'Certificados y asegurados','why.b1.d':'BICSI Technician, FOA CFOT, OSHA-10, Hiscox GL $1M / $2M, exención WC FL.',
+        'why.b2.t':'Probado a norma','why.b2.d':'Trazas OTDR, lecturas de potencia, certificación CAT6, fotos por punto.',
+        'why.b3.t':'Amigable con GCs','why.b3.d':'Enfoque en punch-list, COI a solicitud, reportes con fotos y entregas limpias.',
+        'why.b4.t':'Multilingüe','why.b4.d':'Comunicación de proyecto en inglés, español y ruso.',
+        'proc.kicker':'Cómo trabajamos','proc.title':'Un proceso claro de cuatro pasos: de la primera llamada a la entrega.',
+        'proc.s1.t':'Inspección gratuita','proc.s1.d':'Recorrido del sitio, revisión de planos, documentación de la infraestructura y discusión de objetivos.',
+        'proc.s2.t':'Cotización y alcance','proc.s2.d':'Recibe una propuesta clara con materiales, mano de obra, tiempos y criterios de aceptación.',
+        'proc.s3.t':'Instalación y prueba','proc.s3.d':'Cableado, fusión, montaje y configuración — seguido de pruebas de certificación y etiquetado.',
+        'proc.s4.t':'Entrega y documentación','proc.s4.d':'Reporte fotográfico, OTDR/certificación, planos as-built y cierre de punch-list.',
+        'cov.kicker':'Cobertura','cov.title':'Servimos a Broward, Miami-Dade y Palm Beach.','cov.lead':'Con base en Fort Lauderdale, cubrimos los tres condados para fit-outs comerciales, hostelería, retail, MDU residencial y proyectos gubernamentales.',
+        'cov.h2':'Días disponibles','cov.h2d':'Lunes a domingo, jornada diurna. Soporte nocturno y de emergencia próximamente.','cov.h3':'Disponibles para',
+        'faq.kicker':'Preguntas','faq.title':'Preguntas frecuentes',
+        'faq.q1':'¿Están licenciados y asegurados?','faq.a1':'Sí. BNS Connect LLC tiene Hiscox GL ($1M / $2M) y exención de Workers\' Comp de Florida. COI disponible a solicitud.',
+        'faq.q2':'¿Qué certificaciones tiene el técnico?','faq.a2':'BICSI Technician (#424441), FOA CFOT, OSHA-10, exámenes DBPR Electrical Business y Limited Energy aprobados.',
+        'faq.q3':'¿Trabajan como subcontratistas para GCs e integradores?','faq.a3':'Por supuesto — overflow, movilizaciones de un día y soporte continuo. Emitimos COIs y W-9 a solicitud.',
+        'faq.q4':'¿Qué reportes de prueba entregan?','faq.a4':'Fibra: OTDR y mediciones bidireccionales. Cobre: certificación CAT5e/CAT6. Más fotos y as-built.',
+        'faq.q5':'¿Qué idiomas hablan en sitio?','faq.a5':'Inglés, español y ruso. Ideal para las cuadrillas mixtas del sur de Florida.',
+        'ct.kicker':'Contacto','ct.title':'Cuéntanos sobre tu proyecto.','ct.lead':'Envía algunas líneas con alcance, ubicación y plazos. Solemos responder el mismo día hábil.',
+        'ct.based':'Ubicados en','ct.creds':'Credenciales',
+        'ct.f.name':'Tu nombre *','ct.f.company':'Empresa','ct.f.email':'Email *','ct.f.phone':'Teléfono','ct.f.service':'Servicio de interés','ct.f.location':'Ubicación del proyecto','ct.f.message':'Detalles del proyecto *','ct.f.submit':'Enviar solicitud','ct.f.note':'Al enviar, aceptas que te contactemos sobre tu consulta. Nunca compartimos tu información.',
+        'ft.tag':'Baja tensión · Fibra óptica · Florida — instalación, fusión, cableado.','ft.h1':'Servicios','ft.h2':'Contacto'
+      },
+      ru:{
+        'nav.services':'Услуги','nav.experience':'Опыт','nav.process':'Процесс','nav.coverage':'География','nav.faq':'Вопросы','nav.contact':'Контакты','nav.cta':'Запросить смету',
+        'hero.title':'Оптика и слаботочка — сделанные правильно с первого раза.',
+        'hero.lead':'BNS Connect LLC — подрядчик из Форт-Лодердейла, специализирующийся на монтаже волоконной оптики, сварке, структурированной кабельной системе, видеонаблюдении и Wi-Fi для коммерческих, гостиничных и жилых объектов Южной Флориды.',
+        'hero.cta1':'Бесплатный выезд на объект','hero.cta2':'Смотреть услуги',
+        'hero.stat1':'лет полевого опыта','hero.stat2':'абонентов переведено на оптику','hero.stat3':'лицензировано и застраховано',
+        'hero.bullet1':'Одно- и многомодовая оптика, сварка, измерения OTDR и поверметром',
+        'hero.bullet2':'СКС CAT5e/CAT6, монтаж IDF/MDF, шкафы и кабель-менеджмент',
+        'hero.bullet3':'Видеонаблюдение, PoE-камеры, Wi-Fi обследования и точки доступа',
+        'services.kicker':'Услуги','services.title':'Спроектированные сети. Чистый монтаж. Тесты по нормам.',
+        'services.lead':'От одиночной розетки до полного IDF/MDF — каждая работа документируется, маркируется и тестируется. Ниже — что мы делаем чаще всего для генподрядчиков, интеграторов и заказчиков в Южной Флориде.',
+        'srv.fiber.t':'Монтаж и сварка оптики','srv.fiber.d':'Прокладка одно- и многомодового волокна, сварка, оконцовка, измерения OTDR и поверметром. Магистраль, FTTH/FTTB, кабинеты и муфты.',
+        'srv.lv.t':'Слаботочные системы и СКС','srv.lv.d':'CAT5e / CAT6 / CAT6A, коаксиал, аудио и управление. IDF/MDF, патч-панели, шкафы, кабель-менеджмент, маркировка и сертификация.',
+        'srv.cctv.t':'Видеонаблюдение и охрана','srv.cctv.d':'IP-камеры PoE, NVR, PoE-коммутаторы, монтаж, настройка и удалённый доступ. Чистая прокладка, маркировка, фотоотчёт и пусконаладка.',
+        'srv.wifi.t':'Wi-Fi: обследования и точки доступа','srv.wifi.d':'Радио-обследования, размещение AP и планирование покрытия. Установка, настройка коммутаторов и тесты — для ритейла, отелей и офисов.',
+        'srv.extra1.t':'Обследования и документация','srv.extra1.d':'Предмонтажные обходы, BOM, фотоотчёты и as-built для генподрядчиков и интеграторов.',
+        'srv.extra2.t':'Диагностика и обслуживание','srv.extra2.d':'Поиск неисправностей VFL/OTDR/поверметром, ремонт сварок, диагностика камер и коммутаторов.',
+        'srv.extra3.t':'Субподрядные бригады','srv.extra3.d':'Готовы помочь подрядчикам LV/EC в Бровард, Майами-Дейд и Палм-Бич.',
+        'exp.kicker':'Опыт','exp.title':'15+ лет в телеком и охранных проектах — от городских сетей до корпоративной IP-телефонии.','exp.lead':'Избранные кейсы из послужного списка основателя у крупных интеграторов (МГТС, Ростелеком) до запуска BNS Connect LLC во Флориде.',
+        'exp.c1.t':'Оптика для городского трафика и видеонаблюдения','exp.c1.d':'Линии оптики между узлами телеком и шкафами управления светофорами на ~20 объектах — прокладка, сварка, измерения OTDR.',
+        'exp.c2.t':'Внутридомовая оптика в МКД','exp.c2.d':'Распределение от ОРШ через стояк, цветовая идентификация по этажам, сварка пигтейлов, размещение в кассетах и подключения абонентов.',
+        'exp.c3.t':'Миграция медь→оптика на 1500+ абонентов','exp.c3.d':'Перевод 4 распределительных шкафов на оптическую инфраструктуру — супервизия переключения, настройка шлюзов, проверка сервиса.',
+        'exp.c4.t':'PoE-камеры в школах','exp.c4.d':'Видеонаблюдение под ключ в 5 школах — PoE-камеры, СКС, NVR и PoE-коммутаторы, маркировка, тесты, интеграция в центральную систему.',
+        'exp.c5.t':'95 IP-телефонов — госструктура','exp.c5.d':'Установка и настройка 95 Yealink в офисах ведомства, проверка соединений, полный фотоотчёт.',
+        'exp.c6.t':'Модернизация телефонии отеля','exp.c6.d':'Замена аналоговой системы на 45 номеров на цифровую — новые шлюзы, канал связи, полная проверка и пусконаладка.',
+        'exp.c7.t':'Wi-Fi для 10 отделений банка','exp.c7.d':'РЧ-обследования в 10 отделениях, оценка размещения AP, ёмкость коммутаторов, сводный пакет работ и приёмка.',
+        'exp.c8.t':'Телеком стадиона и фестивальные экраны','exp.c8.d':'5 каналов и 9 коммутаторов в 5 ТР крупного стадиона; экраны 150" с временными каналами для публичного фестиваля.',
+        'exp.c9.t':'Беспроводной мост точка-точка','exp.c9.d':'При невозможности завести магистраль — направленные антенны от соседнего подключённого здания, согласования, настройка и тесты.',
+        'why.kicker':'Почему BNS Connect','why.title':'Старший техник на каждом объекте — без продажных лозунгов.','why.lead':'Локальная команда Южной Флориды под управлением полевого инженера. Ответственное планирование, чистый монтаж, реальные результаты тестов и фотоотчёт в день сдачи.',
+        'why.b1.t':'Сертификаты и страховка','why.b1.d':'BICSI Technician, FOA CFOT, OSHA-10, Hiscox GL $1M / $2M, FL WC Exemption.',
+        'why.b2.t':'Проверено по нормам','why.b2.d':'Трассы OTDR, показания поверметра, отчёты сертификации CAT6, фото на каждую точку.',
+        'why.b3.t':'Удобно для генподряда','why.b3.d':'Фокус на punch-list, COI по запросу, фотоотчёты и аккуратная сдача.',
+        'why.b4.t':'Многоязычно','why.b4.d':'Общение по проекту на английском, испанском и русском.',
+        'proc.kicker':'Как работаем','proc.title':'Чёткий процесс из четырёх шагов — от звонка до сдачи.',
+        'proc.s1.t':'Бесплатный выезд','proc.s1.d':'Обходим объект, изучаем чертежи, фиксируем существующую инфраструктуру и обсуждаем задачи.',
+        'proc.s2.t':'Смета и объём','proc.s2.d':'Получаете прозрачное предложение с материалами, работой, сроками и критериями приёмки.',
+        'proc.s3.t':'Монтаж и тесты','proc.s3.d':'Прокладка, сварка, монтаж и настройка — затем сертификация и маркировка.',
+        'proc.s4.t':'Сдача и документация','proc.s4.d':'Фотоотчёт, OTDR/сертификация, as-built и закрытие punch-list.',
+        'cov.kicker':'География','cov.title':'Работаем в округах Бровард, Майами-Дейд и Палм-Бич.','cov.lead':'База в Форт-Лодердейле, покрываем три округа для коммерческих fit-outs, отелей, ритейла, жилых МКД и государственных объектов.',
+        'cov.h2':'Доступные дни','cov.h2d':'Понедельник – воскресенье, дневные работы. Вечерняя и аварийная поддержка — скоро.','cov.h3':'Подходим для',
+        'faq.kicker':'Вопросы','faq.title':'Часто задаваемые вопросы',
+        'faq.q1':'Вы лицензированы и застрахованы?','faq.a1':'Да. У BNS Connect LLC есть Hiscox GL ($1M / $2M) и Florida Workers\' Comp Exemption. Сертификат страхования выдаём по запросу.',
+        'faq.q2':'Какие сертификаты у техника?','faq.a2':'BICSI Technician (#424441), FOA CFOT, OSHA-10, плюс сданы экзамены DBPR Electrical Business и Limited Energy.',
+        'faq.q3':'Берёте субподряд у генподрядчиков и интеграторов?','faq.a3':'Конечно — overflow, выходы на день и постоянная поддержка. Выдаём COI и W-9 по запросу.',
+        'faq.q4':'Какие отчёты выдаёте?','faq.a4':'По оптике — OTDR и двунаправленные измерения. По меди — сертификация CAT5e/CAT6. Плюс фото и as-built.',
+        'faq.q5':'На каких языках общаетесь на объекте?','faq.a5':'Английский, испанский и русский. Удобно для смешанных бригад Южной Флориды.',
+        'ct.kicker':'Связаться','ct.title':'Расскажите о проекте.','ct.lead':'Несколько строк об объёме, локации и сроках. Обычно отвечаем в тот же рабочий день.',
+        'ct.based':'Базируемся','ct.creds':'Реквизиты',
+        'ct.f.name':'Ваше имя *','ct.f.company':'Компания','ct.f.email':'Email *','ct.f.phone':'Телефон','ct.f.service':'Интересующая услуга','ct.f.location':'Локация проекта','ct.f.message':'Описание проекта *','ct.f.submit':'Отправить','ct.f.note':'Отправляя форму, вы соглашаетесь, что мы свяжемся с вами по запросу. Мы не передаём данные третьим лицам.',
+        'ft.tag':'Слаботочка · Оптика · Флорида — монтаж, сварка, СКС.','ft.h1':'Услуги','ft.h2':'Контакты'
+      }
+    };
+    function applyLang(lang){
+      const map = lang==='en'? null : dict[lang];
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const k = el.getAttribute('data-i18n');
+        if(!map){ if(el.dataset.en){el.textContent = el.dataset.en;} return; }
+        if(!el.dataset.en){ el.dataset.en = el.textContent; }
+        if(map[k]){ el.textContent = map[k]; }
+      });
+      document.querySelectorAll('.lang-btn').forEach(b=>b.setAttribute('aria-current', b.dataset.lang===lang ? 'true':'false'));
+      try{localStorage.setItem('bns-lang', lang);}catch(e){}
+    }
+    document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',()=>applyLang(b.dataset.lang)));
+    const saved = (function(){try{return localStorage.getItem('bns-lang');}catch(e){return null;}})();
+    const browserLang = (navigator.language||'en').slice(0,2);
+    const initial = saved || (['es','ru'].includes(browserLang) ? browserLang : 'en');
+    applyLang(initial);
+
+    // Form: mailto fallback if Web3Forms key not set
+    const f = document.getElementById('quoteForm');
+    if(f){
+      f.addEventListener('submit', (e)=>{
+        const key = f.querySelector('input[name="access_key"]').value;
+        if(!key || key.startsWith('REPLACE')){
+          e.preventDefault();
+          const fd = new FormData(f);
+          const body = ['name','company','email','phone','service','location','message']
+            .map(k=>k.toUpperCase()+': '+(fd.get(k)||'-')).join('%0D%0A');
+          window.location.href = 'mailto:info@bnsconnectllc.com?subject=Quote%20request%20-%20bnsconnectllc.com&body='+body;
+        }
+      });
+    }
   </script>
 </body>
 </html>
