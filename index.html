@@ -42,6 +42,25 @@
     details>summary{list-style:none;cursor:pointer}
     details>summary::-webkit-details-marker{display:none}
   </style>
+<style id="bns-fiber-anim-style">
+  .grad-hero { position: relative; }
+  #fiber-canvas-bns { opacity: .9; }
+  .grad-hero .grid-bg { transition: transform .4s ease-out; }
+  @keyframes bnsBadgeGlow {
+    0%, 100% { box-shadow: 0 0 0 rgba(232,115,43,0); border-color: rgba(255,255,255,.14); }
+    50% { box-shadow: 0 0 14px rgba(232,115,43,.30); border-color: rgba(232,115,43,.45); }
+  }
+  .grad-hero .chip { animation: bnsBadgeGlow 3.2s ease-in-out infinite; }
+  .grad-hero .chip:nth-child(2) { animation-delay: .5s; }
+  .grad-hero .chip:nth-child(3) { animation-delay: 1s; }
+  .grad-hero .chip:nth-child(4) { animation-delay: 1.5s; }
+  .grad-hero .chip:nth-child(5) { animation-delay: 2s; }
+  @media (prefers-reduced-motion: reduce) {
+    .grad-hero .chip { animation: none !important; }
+    #fiber-canvas-bns { transition: none !important; }
+    .grad-hero .grid-bg { transition: none !important; }
+  }
+</style>
 </head>
 <body class="antialiased">
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-accent text-white px-3 py-2 rounded">Skip to content</a>
@@ -73,7 +92,7 @@
 
   <main id="main">
 
-  <section class="relative grad-hero text-white overflow-hidden">
+  <section class="relative grad-hero text-white overflow-hidden"><canvas id="fiber-canvas-bns" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;transition:transform .25s ease-out;"></canvas>
     <div class="absolute inset-0 grid-bg opacity-40 pointer-events-none"></div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 pt-20 pb-24 lg:pt-28 lg:pb-32">
       <div class="grid lg:grid-cols-12 gap-10 items-center">
@@ -591,5 +610,142 @@
     document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
   })();
   </script>
+
+<script>
+(function(){
+  var canvas = document.getElementById('fiber-canvas-bns');
+  if(!canvas) return;
+  var hero = canvas.closest('.grad-hero');
+  var grid = hero ? hero.querySelector('.grid-bg') : null;
+  var ctx = canvas.getContext('2d');
+  var W, H, fibers = [], pulses = [];
+  var mouse = { x:-99999, y:-99999, active:false };
+  var parallaxX=0, parallaxY=0, targetPX=0, targetPY=0;
+  var DPR = Math.min(window.devicePixelRatio||1, 2);
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function sizeOf(){
+    var r = hero ? hero.getBoundingClientRect() : {width:window.innerWidth,height:window.innerHeight};
+    return { w: Math.max(1, r.width), h: Math.max(1, r.height) };
+  }
+  function resize(){
+    var s = sizeOf();
+    W = canvas.width = s.w * DPR; H = canvas.height = s.h * DPR;
+    canvas.style.width = s.w + 'px'; canvas.style.height = s.h + 'px';
+    buildFibers();
+  }
+  function buildFibers(){
+    fibers = [];
+    var count = (sizeOf().w < 880) ? 16 : 30;
+    for(var i=0;i<count;i++){
+      var startY = (H/(count+1))*(i+1) + (Math.random()-0.5)*50*DPR;
+      var pts = [], segs = 7;
+      for(var s=0;s<=segs;s++){
+        pts.push({ x:(W/segs)*s, y:startY + Math.sin(s*0.9+i)*48*DPR + (Math.random()-0.5)*28*DPR });
+      }
+      fibers.push({ pts:pts, hue: (Math.random()>0.5?'orange':'cyan'), baseAlpha: 0.05 + Math.random()*0.05, flare:0 });
+    }
+  }
+  function col(f){ return f.hue==='orange' ? '232,115,43' : '45,212,212'; }
+  function spawnPulse(force){
+    if(!fibers.length) return;
+    var f = force || fibers[Math.floor(Math.random()*fibers.length)];
+    pulses.push({ fiber:f, t:0, speed:0.0028 + Math.random()*0.0035, color: col(f), len:0.08 + Math.random()*0.06 });
+  }
+  function loadWave(){ fibers.forEach(function(f){ pulses.push({ fiber:f, t:0, speed:0.006, color: col(f), len:0.12 }); }); }
+  function pointOnFiber(f,t){
+    var segCount = f.pts.length - 1, scaled = t*segCount;
+    var i = Math.min(Math.floor(scaled), segCount-1), local = scaled - i;
+    var a = f.pts[i], b = f.pts[i+1];
+    return { x: a.x + (b.x-a.x)*local, y: a.y + (b.y-a.y)*local };
+  }
+  function drawFiberPath(f){
+    ctx.beginPath(); ctx.moveTo(f.pts[0].x, f.pts[0].y);
+    for(var i=1;i<f.pts.length;i++){
+      var xc=(f.pts[i].x+f.pts[i-1].x)/2, yc=(f.pts[i].y+f.pts[i-1].y)/2;
+      ctx.quadraticCurveTo(f.pts[i-1].x, f.pts[i-1].y, xc, yc);
+    }
+    ctx.lineTo(f.pts[f.pts.length-1].x, f.pts[f.pts.length-1].y);
+  }
+  function fiberMouseDist(f){
+    if(!mouse.active) return Infinity;
+    var min = Infinity, mx = mouse.x*DPR, my = mouse.y*DPR;
+    for(var s=0;s<=12;s++){
+      var p = pointOnFiber(f, s/12);
+      var dx=p.x-mx, dy=p.y-my, d=Math.sqrt(dx*dx+dy*dy);
+      if(d<min) min=d;
+    }
+    return min;
+  }
+  var lastSpawn = 0;
+  function animate(ts){
+    ctx.clearRect(0,0,W,H);
+    parallaxX += (targetPX-parallaxX)*0.06; parallaxY += (targetPY-parallaxY)*0.06;
+    ctx.save(); ctx.translate(parallaxX, parallaxY);
+    var hoverThreshold = 70*DPR;
+    fibers.forEach(function(f){
+      var d = fiberMouseDist(f), tf = 0;
+      if(d < hoverThreshold){ tf = 1 - (d/hoverThreshold); if(Math.random() < 0.04*tf) spawnPulse(f); }
+      f.flare += (tf - f.flare)*0.15;
+      drawFiberPath(f);
+      var a = f.baseAlpha + f.flare*0.5;
+      ctx.strokeStyle = 'rgba('+col(f)+','+a+')';
+      ctx.lineWidth = (1 + f.flare*1.6)*DPR;
+      if(f.flare > 0.05){ ctx.shadowBlur = 14*f.flare*DPR; ctx.shadowColor = 'rgba('+col(f)+',0.9)'; } else { ctx.shadowBlur = 0; }
+      ctx.stroke(); ctx.shadowBlur = 0;
+    });
+    pulses.forEach(function(p){
+      p.t += p.speed; var head = p.t, tail = p.t - p.len;
+      if(tail > 1) return;
+      var steps = 18;
+      for(var s=0;s<steps;s++){
+        var lt = tail + (head-tail)*(s/steps);
+        if(lt<0 || lt>1) continue;
+        var pt = pointOnFiber(p.fiber, lt);
+        var fade = s/steps, r = (1.5 + fade*2.5)*DPR;
+        ctx.beginPath(); ctx.arc(pt.x, pt.y, r, 0, Math.PI*2);
+        ctx.fillStyle = 'rgba('+p.color+','+(fade*0.9)+')'; ctx.fill();
+      }
+      if(head<=1 && head>=0){
+        var hp = pointOnFiber(p.fiber, head);
+        var g = ctx.createRadialGradient(hp.x, hp.y, 0, hp.x, hp.y, 14*DPR);
+        g.addColorStop(0, 'rgba('+p.color+',1)'); g.addColorStop(0.4, 'rgba('+p.color+',0.5)'); g.addColorStop(1, 'rgba('+p.color+',0)');
+        ctx.beginPath(); ctx.arc(hp.x, hp.y, 14*DPR, 0, Math.PI*2); ctx.fillStyle = g; ctx.fill();
+      }
+    });
+    ctx.restore();
+    pulses = pulses.filter(function(p){ return p.t - p.len <= 1; });
+    if(ts - lastSpawn > 220){ spawnPulse(); if(Math.random()>0.5) spawnPulse(); lastSpawn = ts; }
+    requestAnimationFrame(animate);
+  }
+  if(!reduceMotion && hero){
+    hero.addEventListener('mousemove', function(e){
+      var rect = hero.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left; mouse.y = e.clientY - rect.top; mouse.active = true;
+      var nx = (mouse.x/rect.width) - 0.5, ny = (mouse.y/rect.height) - 0.5;
+      targetPX = -nx*30*DPR; targetPY = -ny*22*DPR;
+      if(grid) grid.style.transform = 'translate('+(-nx*14)+'px,'+(-ny*10)+'px)';
+    });
+    hero.addEventListener('mouseleave', function(){
+      mouse.active=false; mouse.x=-99999; mouse.y=-99999; targetPX=0; targetPY=0;
+      if(grid) grid.style.transform = 'translate(0,0)';
+    });
+  }
+  var ro;
+  function init(){
+    resize();
+    if(window.ResizeObserver && hero){ ro = new ResizeObserver(function(){ resize(); }); ro.observe(hero); }
+    window.addEventListener('resize', resize);
+    if(!reduceMotion){
+      requestAnimationFrame(animate);
+      for(var i=0;i<6;i++) spawnPulse();
+      setTimeout(loadWave, 250);
+    } else {
+      fibers.forEach(function(f){ drawFiberPath(f); ctx.strokeStyle='rgba(232,115,43,0.10)'; ctx.lineWidth=DPR; ctx.stroke(); });
+    }
+  }
+  if(document.readyState === 'complete' || document.readyState === 'interactive'){ init(); }
+  else { window.addEventListener('DOMContentLoaded', init); }
+})();
+</script>
 </body>
 </html>
