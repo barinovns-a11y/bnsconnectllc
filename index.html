@@ -175,13 +175,13 @@
                 #fc-step4{animation:fcS 10s infinite -7.2s}
                 @keyframes fcPass { 0%,88%{opacity:0;transform:scale(.7)} 92%{opacity:1;transform:scale(1.06)} 96%,100%{opacity:1;transform:scale(1)} }
                 #fc-pass{opacity:0;transform-origin:center;transform-box:fill-box;animation:fcPass 10s infinite}
-                @keyframes fcBar { 0%{width:0} 85%{width:202} 100%{width:202} }
+                @keyframes fcBar { 0%{width:0} 85%{width:202px} 100%{width:202px} }
                 #fc-bar{animation:fcBar 10s infinite}
                 @keyframes fcPulse { 0%,100%{opacity:.25} 50%{opacity:.9} }
                 .fc-led{animation:fcPulse 1.4s ease-in-out infinite}
                 @keyframes fcSignal { 0%{stroke-dashoffset:120} 100%{stroke-dashoffset:0} }
                 .fc-sig{stroke-dasharray:8 10;animation:fcSignal 1.1s linear infinite}
-                @media (prefers-reduced-motion: reduce){ #fluke-clip *{animation:none!important} #fc-pass{opacity:1;transform:none} #fc-bar{width:202} #fc-step4{opacity:1} }
+                @media (prefers-reduced-motion: reduce){ #fluke-clip *{animation:none!important} #fc-pass{opacity:1;transform:none} #fc-bar{width:202px} #fc-step4{opacity:1} }
               </style>
               <svg viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
                 <defs>
